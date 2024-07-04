@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>civic launcher</title>
+    <title>about this launcher</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
@@ -55,17 +55,6 @@
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        .status {
-            margin-top: 5px;
-            font-size: 14px;
-            color: #d9d9d9;
-        }
-        .offline {
-            color: #ff595e;
-        }
-        .online {
-            color: #8ac926;
-        }
         .about-button {
             position: fixed;
             bottom: 20px;
@@ -82,7 +71,7 @@
             transition: background-color 0.3s, transform 0.3s;
         }
         .about-button:hover {
-            background-color: rgba(105, 105, 105, 0.9); 
+            background-color: rgba(105, 105, 105, 0.9); /* Darker gray color */
             transform: translateY(-3px);
         }
         .time-display {
@@ -97,22 +86,19 @@
     </style>
 </head>
 <body>
-    <div class="header">Civic Launcher</div>
+    <div class="header">you are running civic version 1.1</div>
     <div class="grid">
-        <button onclick="location.href='eaglercraft.html'">
-            Eaglercraft 1.5.2
-            <div class="status online">ONLINE</div>
+        <button onclick="location.href='https://www.youtube.com/@scivic1007'">
+            youTube
         </button>
-        <button onclick="location.href='eaglercraftx.html'">
-            Eaglercraft 1.8.8
-            <div class="status online">ONLINE</div>
+        <button onclick="location.href='https://www.x.com/seventygrandW'">
+            twitter
         </button>
-        <button onclick="location.href='resentclient.html'">
-            Resent Client
-            <div class="status online">ONLINE</div>
+        <button onclick="location.href='https://discordapp.com/users/civic1007'">
+            discord
         </button>
     </div>
-    <button class="about-button" onclick="location.href='about.html'">‎ ?‎ ‎ </button>
+    <button class="about-button" onclick="location.href='index.html'">‎ ?‎‎ ‎  </button>
     <div class="time-display" id="time"></div>
     <script>
         function updateTime() {
