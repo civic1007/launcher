@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civic Launcher</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: #e6f0ff;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 20px;
+            position: relative;
+        }
+        .header {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .grid {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .grid button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: #333;
+            background: #fff;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .grid button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .grid .status {
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        .offline {
+            color: red;
+        }
+        .online {
+            color: green;
+        }
+        .about-button {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            padding: 15px;
+            background-color: #333;
+            color: #fff;
+            font-size: 14px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .about-button:hover {
+            background-color: #555;
+        }
+        .time-display {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Civic Launcher</div>
+    <div class="grid">
+        <button onclick="location.href='eaglercraft.html'">
+            Eaglercraft 1.5.2
+            <div class="status online">ONLINE</div>
+        </button>
+        <button onclick="location.href='eaglercraftx.html'">
+            Eaglercraft 1.8.8
+            <div class="status online">Development Continued</div>
+        </button>
+        <button onclick="location.href='resentclient.html'">
+            Resent Client
+            <div class="status online">ONLINE</div>
+        </button>
+    </div>
+    <button class="about-button" onclick="location.href='about.html'">About Civic Launcher</button>
+    <div class="time-display" id="time"></div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
